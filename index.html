@@ -1,0 +1,100 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Encriptación y Desencriptación de Texto</title>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+
+<nav>
+  <h1>Cryptex</h1>
+  <h3>Encriptación y Desencriptación de Texto</h3>
+</nav>
+  
+  
+
+  <main >
+    <section>
+    <textarea id="textoOriginal" rows="4" cols="50">Escribeme</textarea>
+    <br>
+    <div class="btnOpcion">
+      <button onclick="encriptarTexto()" class="btn1">Encriptar</button>
+    <button onclick="desencriptarTexto()" class="btn2">Desencriptar</button>
+   
+   
+    </div>
+    </section>
+   
+    <aside class="bb">
+
+      <div class="textiEn">
+        <label for="textoEncriptado">Texto Encriptado:</label>
+        <textarea id="textoEncriptado" rows="4" cols="50" readonly></textarea>
+      </div>
+      <div id="imagen" class="imagen">
+        <img src="img/1.png" alt="">
+      </div>
+    
+      
+     
+      <div class="btnCopy">
+        <button onclick="copy()" class="btn3">copy</button>
+      </div>
+    </aside>
+  </main>
+<footer>
+  Copyright (C) 2023 
+  juan fernando carrillo angarita
+  carrillobarbosa@hotmail.com
+</footer>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <script src="script1.js"></script>
+ <!--  
+  <script>
+    // Creamos una clave para encriptar los datos (puede ser cualquier cadena de caracteres)
+    const clave = "clave-secreta";
+    let textoEncriptado;
+    console.log(textoEncriptado)
+    // Función para encriptar texto
+    function encriptarTexto() {
+      const textoOriginal = document.getElementById("textoOriginal").value;
+      textoEncriptado = CryptoJS.AES.encrypt(textoOriginal, clave).toString();
+      document.getElementById("textoEncriptado").value = textoEncriptado;
+   
+    }
+    function copy(){
+        document.getElementById("textoOriginal").value = "";
+        const copiar =  document.getElementById("textoEncriptado").value;
+        console.log(copiar);
+
+        document.getElementById("textoOriginal").value = copiar;
+    }
+    
+    // Función para desencriptar texto
+    function desencriptarTexto() {
+      const textoEncriptado = document.getElementById("textoOriginal").value;
+      const bytesDesencriptados = CryptoJS.AES.decrypt(textoEncriptado, clave);
+      const textoDesencriptado = bytesDesencriptados.toString(CryptoJS.enc.Utf8);
+      document.getElementById("textoDesencriptado").value = textoDesencriptado;
+      
+   
+    }
+
+
+  </script> -->
+</body>
+</html>
+<!--Juan Fernando Carrillo Angarita
+carrillobarbosa@hotmail.com
+soportesida@gmail.com
+-->
